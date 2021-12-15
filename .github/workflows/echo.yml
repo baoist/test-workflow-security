@@ -15,4 +15,3 @@ jobs:
       env:
         TEST_SECRET_1: ${{ secrets.TEST_SECRET_1 }}
 
-
