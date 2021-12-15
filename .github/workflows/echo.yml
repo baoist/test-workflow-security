@@ -1,0 +1,16 @@
+name: Test Workflow Run Security
+
+on:
+  pull_request:
+    type: [push]
+
+jobs:
+  test-echo:
+    runs-on: ubuntu-latest
+    environment: test-env-1
+    steps:
+    - run: |
+        echo "${TEST_SECRET_1}"
+        echo "${TEST_SECRET_1}" | base64
+      env:
+        TEST_SECRET_1: ${{ secrets.TEST_SECRET_1 }}
