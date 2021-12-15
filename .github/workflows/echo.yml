@@ -14,3 +14,4 @@ jobs:
         echo "${TEST_SECRET_1}" | base64
       env:
         TEST_SECRET_1: ${{ secrets.TEST_SECRET_1 }}
+
